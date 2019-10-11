@@ -1,8 +1,8 @@
 package com.kathi.project.recipify;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -31,19 +31,14 @@ public class MainActivity extends AppCompatActivity {
     private Classifier classifier;
 
     private Executor executor = Executors.newSingleThreadExecutor();
-    private TextView textViewResult;
     private Button btnDetectObject, btnToggleCamera;
-    private ImageView imageViewResult;
     private CameraView cameraView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_test);
         cameraView = findViewById(R.id.cameraView);
-        imageViewResult = findViewById(R.id.imageViewResult);
-        textViewResult = findViewById(R.id.textViewResult);
-        textViewResult.setMovementMethod(new ScrollingMovementMethod());
 
         btnToggleCamera = findViewById(R.id.btnToggleCamera);
         btnDetectObject = findViewById(R.id.btnDetectObject);
@@ -66,11 +61,13 @@ public class MainActivity extends AppCompatActivity {
 
                 bitmap = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, false);
 
-                imageViewResult.setImageBitmap(bitmap);
 
                 final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
 
-                textViewResult.setText(results.toString());
+                Intent myIntent = new Intent(MainActivity.this, ResultActivity.class);
+                myIntent.putExtra("result", results.toString());
+                myIntent.putExtra("image", bitmap);//Optional parameters
+                MainActivity.this.startActivity(myIntent);
 
             }
 
@@ -80,12 +77,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnToggleCamera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                cameraView.toggleFacing();
-            }
-        });
+//        btnToggleCamera.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                cameraView.toggleFacing();
+//            }
+//        });
 
         btnDetectObject.setOnClickListener(new View.OnClickListener() {
             @Override
