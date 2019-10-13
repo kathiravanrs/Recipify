@@ -3,6 +3,7 @@
     <words>
       <w>mobilenet</w>
       <w>quant</w>
+      <w>textview</w>
       <w>tflite</w>
     </words>
   </dictionary>
