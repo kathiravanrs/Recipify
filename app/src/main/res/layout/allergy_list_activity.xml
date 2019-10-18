@@ -31,11 +31,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+
             android:layout_weight="1"
             android:orientation="vertical">
 
             <CheckBox
-                android:id="@+id/MeatBox"
+                android:id="@+id/meatBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -70,7 +72,7 @@
                 android:text="Seafood" />
 
             <CheckBox
-                android:id="@+id/GlutenBox"
+                android:id="@+id/glutenBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -79,7 +81,7 @@
                 android:text="Gluten" />
 
             <CheckBox
-                android:id="@+id/SOyBox"
+                android:id="@+id/soyBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"

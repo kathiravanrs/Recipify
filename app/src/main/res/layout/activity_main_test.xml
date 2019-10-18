@@ -15,7 +15,7 @@
         android:id="@+id/cameraView"
         android:layout_marginTop="20dp"
         android:layout_width="380dp"
-        android:layout_height="380dp"
+        android:layout_height="590dp"
         android:layout_gravity="center|top" />
 
     <LinearLayout
@@ -36,7 +36,7 @@
 
         <Button
             android:foreground="?android:attr/selectableItemBackground"
-
+            android:elevation="5dp"
             android:id="@+id/btnDetectObject"
             android:layout_width="100dp"
             android:layout_marginLeft="90dp"
