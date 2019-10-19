@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "129835178219",
+    "firebase_url": "https://recipify-c54b7.firebaseio.com",
+    "project_id": "recipify-c54b7",
+    "storage_bucket": "recipify-c54b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129835178219:android:d86cf5e6e1a3931765c6ae",
+        "android_client_info": {
+          "package_name": "com.kathi.project.recipify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "129835178219-ifl0d9lp86c18jaja8sedj6lpl7470pu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kathi.project.recipify",
+            "certificate_hash": "6409c45d896e712d993594178ed0c226e9ab7141"
+          }
+        },
+        {
+          "client_id": "129835178219-ndhctkd45q1scck2jis459aig9o8ok0a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2y3LoQwpboRTBP6RZ4Pp9IROMygJLV6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "129835178219-ndhctkd45q1scck2jis459aig9o8ok0a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
