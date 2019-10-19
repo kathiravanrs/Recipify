@@ -11,7 +11,7 @@
     android:orientation="vertical"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.kathi.project.recipify.MainActivity"
-    android:background="@drawable/background_image">
+    android:background="@color/cyan">
 
 
     <LinearLayout
@@ -20,11 +20,14 @@
         android:orientation="vertical">
 
         <TextView
+            android:paddingTop="20dp"
+            android:textColor="@color/white_70"
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="30sp"
+            android:layout_weight="1"
 
             android:text="What are you allergic to?" />
 
@@ -32,11 +35,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="30dp"
-
-            android:layout_weight="1"
+            android:layout_weight="4"
+            android:animateLayoutChanges="true"
             android:orientation="vertical">
 
             <CheckBox
+                android:textColor="@color/white_70"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:id="@+id/meatBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -49,7 +55,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-
+                android:textColor="@color/white_70"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="Dairy Products" />
 
@@ -58,7 +66,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-
+                android:textColor="@color/white_70"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="Nuts" />
 
@@ -67,7 +77,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-
+                android:textColor="@color/white_70"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="Seafood" />
 
@@ -76,7 +88,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-
+                android:textColor="@color/white_70"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="Gluten" />
 
@@ -85,7 +99,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-
+                android:textColor="@color/white_70"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="Soy" />
 
@@ -93,12 +109,13 @@
         </LinearLayout>
 
         <Button
+            android:layout_weight="1"
             android:id="@+id/submitButton"
             android:layout_marginTop="80dp"
             android:layout_marginBottom="20dp"
-            android:layout_gravity="center"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
             android:text="Submit" />
 
     </LinearLayout>

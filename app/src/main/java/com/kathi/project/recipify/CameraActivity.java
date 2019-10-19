@@ -42,12 +42,9 @@ import java.util.concurrent.Executors;
 
 public class CameraActivity extends AppCompatActivity {
 
-    private static final String MODEL_PATH = "mobilenet_quant_v1_224.tflite";
-    private static final boolean QUANT = true;
-    private static final String LABEL_PATH = "labels.txt";
-    private static final int INPUT_SIZE = 224;
 
-    private Classifier classifier;
+    private static final int INPUT_SIZE = 128;
+
     private Executor executor = Executors.newSingleThreadExecutor();
     private Button btnDetectObject, btnToggleCamera, btnToggleFlash;
     private CameraView cameraView;
@@ -92,13 +89,11 @@ public class CameraActivity extends AppCompatActivity {
                 saveImage(bitmap);
                 uploadImage();
                 bitmap = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, false);
-                final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
 
 
                 ArrayList<String> test = getIntent().getStringArrayListExtra("allergies");
 
                 Intent myIntent = new Intent(CameraActivity.this, ResultActivity.class);
-                myIntent.putExtra("result", results.toString());
                 myIntent.putExtra("image", bitmap);
                 myIntent.putExtra("imgPath", getFileLocation().getAbsoluteFile()+"/screen.jpg");
                 myIntent.putStringArrayListExtra("allergies", test);
@@ -154,29 +149,12 @@ public class CameraActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        executor.execute(new Runnable() {
-            @Override
-            public void run() {
-                classifier.close();
-            }
-        });
     }
 
     private void initTensorFlowAndLoadModel() {
         executor.execute(new Runnable() {
             @Override
             public void run() {
-                try {
-                    classifier = TensorFlowImageClassifier.create(
-                            getAssets(),
-                            MODEL_PATH,
-                            LABEL_PATH,
-                            INPUT_SIZE,
-                            QUANT);
-                    makeButtonVisible();
-                } catch (final Exception e) {
-                    throw new RuntimeException("Error initializing TensorFlow!", e);
-                }
             }
         });
     }
@@ -205,7 +183,7 @@ public class CameraActivity extends AppCompatActivity {
                 file.delete();
             try {
                 FileOutputStream out = new FileOutputStream(file);
-                bm.compress(Bitmap.CompressFormat.JPEG, 20, out);
+                bm.compress(Bitmap.CompressFormat.JPEG, 100, out);
                 out.flush();
                 out.close();
                 Toast.makeText(CameraActivity.this, "SAVED"+getFileLocation(), Toast.LENGTH_LONG).show();

@@ -39,6 +39,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.airbnb.android:lottie:3.0.7'
     implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.android.support:design:25.1.1'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.0.0-alpha1'
+
 
 
 }

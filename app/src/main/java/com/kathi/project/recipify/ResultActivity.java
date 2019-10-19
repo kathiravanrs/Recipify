@@ -75,16 +75,16 @@ public class ResultActivity extends AppCompatActivity {
 
         int check = 0;
 
-        for(int i=0; i<allergies.size();i++){
-            if(TextValue.contains(allergies.get(i))){
-                warningView.setText("Do not eat. May contain " + allergies.get(i));
-                check = 1;
-            }
-        }
-        if(check == 0){
-            warningView.setBackgroundResource(R.drawable.warning_box_green);
-            warningView.setText("Safe to consume");
-        }
+//        for(int i=0; i<allergies.size();i++){
+//            if(TextValue.contains(allergies.get(i))){
+//                warningView.setText("Do not eat. May contain " + allergies.get(i));
+//                check = 1;
+//            }
+//        }
+//        if(check == 0){
+//            warningView.setBackgroundResource(R.drawable.warning_box_green);
+//            warningView.setText("Safe to consume");
+//        }
 
         attachDatabaseReadListener();
     }

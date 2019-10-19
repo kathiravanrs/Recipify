@@ -47,6 +47,7 @@ public class AllergyActivity extends AppCompatActivity {
                     allergyList.add("mutton");
                     allergyList.add("pork");
                     allergyList.add("beef");
+                    allergyList.add("eggs");
                 }
                 if (dairyCheck.isChecked()) {
                     allergyList.add("cheese");

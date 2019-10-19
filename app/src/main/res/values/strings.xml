@@ -1,5 +1,30 @@
 <resources>
     <string name="app_name">Recipify</string>
-    <string name="toggle_camera">Toggle Camera</string>
-    <string name="detect_object">Detect Object</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_fab_animations">FAB Animation</string>
+    <string name="title_activity_toolbar_test">ToolbarTestActivity</string>
+    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
+    <string name="title_activity_animate_toolbar">Animate Toolbar</string>
+    <string name="title_activity_tab_animation">Tabs Animation</string>
+    <string name="title_activity_sticky_view">StickyViewActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_swipe_refresh">Swipe Refresh</string>
+    <string name="title_activity_mini_drawer">Mini Drawer</string>
+    <string name="title_activity_nested_toolbar">Nested Toolbar</string>
+    <string name="action_search">Search</string>
+    <string name="action_view_module">View</string>
+    <string name="title_quick_return">Quick Return</string>
+    <string name="title_activity_reveal">Reveal Animation</string>
+    <string name="title_activity_reveal_animation">Reveal Animation</string>
+    <string name="title_activity_launch_screen">LaunchScreenActivity</string>
+    <string name="title_activity_gmail_style">Gmail List</string>
+    <string name="title_activity_tabs_header">Header Tabs</string>
+    <string name="title_activity_pager">PagerActivity</string>
+    <string name="section_format">Page %1$d</string>
+    <string name="action_add">Add</string>
+    <string name="android_desserts">Android Desserts</string>
 </resources>
