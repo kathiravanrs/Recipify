@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -119,7 +120,6 @@ public class CameraActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 cameraView.toggleFlash();
-                Toast.makeText(CameraActivity.this, ""+cameraView.getFlash(), Toast.LENGTH_LONG).show();
             }
         });
 
@@ -170,7 +170,6 @@ public class CameraActivity extends AppCompatActivity {
     private void saveImage(Bitmap bm){
 
         if(ContextCompat.checkSelfPermission(CameraActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
-            Toast.makeText(CameraActivity.this,"Permission Not Granted", Toast.LENGTH_LONG).show();
             ActivityCompat.requestPermissions(CameraActivity.this,
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                     5);
@@ -185,7 +184,6 @@ public class CameraActivity extends AppCompatActivity {
                 bm.compress(Bitmap.CompressFormat.JPEG, 100, out);
                 out.flush();
                 out.close();
-                Toast.makeText(CameraActivity.this, "SAVED"+getFileLocation(), Toast.LENGTH_LONG).show();
             } catch (Exception e) {
                 e.printStackTrace();
                 Toast.makeText(CameraActivity.this, "Failed", Toast.LENGTH_LONG).show();
@@ -221,7 +219,14 @@ public class CameraActivity extends AppCompatActivity {
                                     Log.d("Dwnldurl", "onSuccess: uri= "+ uri.toString());
                                     mMessagesDatabaseReference.setValue(uri.toString());
                                     mFirebaseDatabase.getReference().child("check").setValue(1);
-                                    CameraActivity.this.startActivity(myIntent);
+
+                                    final Handler handler = new Handler();
+                                    handler.postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            CameraActivity.this.startActivity(myIntent);
+                                        }
+                                    }, 750);
 
                                 }
                             });

@@ -1,10 +1,9 @@
 package com.kathi.project.recipify;
 
 
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toolbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 

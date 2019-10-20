@@ -98,7 +98,6 @@ public class AllergyActivity extends AppCompatActivity {
                 }
 
                 //Displaying the message on the toast
-                Toast.makeText(getApplicationContext(), allergyList.toString(), Toast.LENGTH_LONG).show();
                 cameraIntent.putStringArrayListExtra("allergies",(ArrayList<String>) allergyList);
                 AllergyActivity.this.startActivity(cameraIntent);
             }

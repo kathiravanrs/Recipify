@@ -24,6 +24,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class PagerActivity extends AppCompatActivity {
 
 
@@ -76,6 +78,7 @@ public class PagerActivity extends AppCompatActivity {
         mSkipBtn =  findViewById(R.id.intro_btn_skip);
         mFinishBtn =  findViewById(R.id.intro_btn_finish);
 
+
         zero =  findViewById(R.id.intro_indicator_0);
         one =  findViewById(R.id.intro_indicator_1);
         two =  findViewById(R.id.intro_indicator_2);
@@ -97,6 +100,7 @@ public class PagerActivity extends AppCompatActivity {
         final int color3 = ContextCompat.getColor(this, R.color.green);
 
         final int[] colorList = new int[]{color1, color2, color3};
+
 
         final ArgbEvaluator evaluator = new ArgbEvaluator();
 
@@ -221,6 +225,10 @@ public class PagerActivity extends AppCompatActivity {
 
         int[] bgs = new int[]{R.drawable.ic_check, R.drawable.ic_camera, R.drawable.ic_explore_24dp};
 
+        final String[] titleList = {"Choose Dietary Restrictions","Take a picture","Get Information"};
+        final String[] descList = {"Check the boxes corresponding to your restrictions","Take a picture of the food item for which you need the info"," Browse through the food information and find out if you are allergic to that food. You can also find its nutritional value and recipes for that food."};
+
+
         public PlaceholderFragment() {
         }
 
@@ -241,10 +249,16 @@ public class PagerActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_pager, container, false);
             TextView textView =  rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            textView.setText(titleList[getArguments().getInt(ARG_SECTION_NUMBER) - 1]);
 
             img =  rootView.findViewById(R.id.section_img);
             img.setBackgroundResource(bgs[getArguments().getInt(ARG_SECTION_NUMBER) - 1]);
+
+            final TextView sectionDesc = rootView.findViewById(R.id.section_desc);
+            sectionDesc.setText(descList[getArguments().getInt(ARG_SECTION_NUMBER) - 1]);
+
+
+
 
 
             return rootView;

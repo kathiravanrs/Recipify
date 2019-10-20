@@ -7,7 +7,7 @@
 					"https://www.amazon.com/Sprite-Lemon-Lime-Soda-Drinks/dp/B00HZYE1YA"]
 	},
 	"peanut butter": {
-		"Ingredients": ["Peanuts", "Sugar", "Molasses", "Vegetable Oils", "Mono And Diglycerides", "Salt"],
+		"Ingredients": ["Peanuts", "Sugar", "Molasses", "Vegetable Oil", "Salt"],
 		"name": ["Homemade Peanut Butter", "Crunchy Peanut Butter", "Chunky Peanut Butter Cookies"],
 		"Recipe": [ "https://www.thekitchn.com/how-to-make-homemade-peanut-butter-cooking-lessons-from-the-kitchn-199110",
 					 "https://amyshealthybaking.com/blog/2018/02/28/easy-blender-crunchy-peanut-butter/",
@@ -28,7 +28,7 @@
 					"https://www.allrecipes.com/recipe/259701/chocolate-cupcakes-with-pumpkin-cheesecake-filling/?internalSource=streams&referringId=16766&referringContentType=Recipe%20Hub&clickId=st_recipes_mades"]
 	},
 	"bagels": {
-		"Ingredients": ["flour", "Water", "Brown Sugar", "Malt Syrup", "Sea Salt", "Yeast", "Raisin juice concentrate", "Malt Powder", "Molasses Powder", "Honey Powder", "Soybean Oil", "Wheat", "Gluten", "Ascorbic Acid"],
+		"Ingredients": ["gluten","flour", "Water", "Brown Sugar", "Malt Syrup", "Sea Salt", "Yeast", "Raisin juice concentrate", "Malt Powder", "Molasses Powder", "Honey Powder", "Soybean Oil", "Wheat", "Gluten", "Ascorbic Acid"],
 		"name": ["homemade bagels", "Blueberry bagels", "Mini bagels"],
 		"Recipe": ["https://sallysbakingaddiction.com/homemade-bagels/",
 					"https://www.bakerita.com/blueberry-bagels/",
