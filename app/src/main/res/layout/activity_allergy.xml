@@ -21,14 +21,16 @@
         <TextView
             android:paddingTop="20dp"
             android:textColor="#000000"
+            android:padding="12dp"
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textSize="30sp"
             android:layout_weight="1"
-
-            android:text="What are you allergic to?" />
+            android:background="@color/light_green"
+            android:elevation="3dp"
+            android:text="What are your dietary restrictions?" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,70 +41,93 @@
             android:orientation="vertical">
 
             <CheckBox
-                android:textColor="@color/white_70"
+                android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:id="@+id/meatBox"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:layout_weight="1"
-                android:text="Meat" />
+                android:text="Vegetarian" />
 
             <CheckBox
                 android:id="@+id/dairyBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:textColor="@color/white_70"
+                android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_weight="1"
-                android:text="Dairy Products" />
+                android:text="Lactose Intolerant" />
 
             <CheckBox
                 android:id="@+id/nutBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:textColor="@color/white_70"
+                android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_weight="1"
-                android:text="Nuts" />
+                android:text="Allergic to Nuts" />
 
             <CheckBox
                 android:id="@+id/seafoodBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:textColor="@color/white_70"
+                android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_weight="1"
-                android:text="Seafood" />
+                android:text="Allergic to Seafood" />
 
             <CheckBox
                 android:id="@+id/glutenBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:textColor="@color/white_70"
+                android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_weight="1"
-                android:text="Gluten" />
+                android:text="Gluten Free" />
 
             <CheckBox
                 android:id="@+id/soyBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:textColor="@color/white_70"
+                android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_weight="1"
-                android:text="Soy" />
+                android:text="Soy Free" />
+
+            <CheckBox
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:id="@+id/diabeticBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_weight="1"
+                android:text="Diabetic Food" />
+
+            <CheckBox
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:id="@+id/lowFatBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_weight="1"
+                android:text="Low Fat Food" />
 
 
         </LinearLayout>

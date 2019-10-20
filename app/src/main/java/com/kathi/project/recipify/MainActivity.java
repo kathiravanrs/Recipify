@@ -10,11 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
-    Intent intent;
-
-    String[] colors = {"#96CC7A", "#EA705D", "#66BBCC"};
-
     public static final String PREF_USER_FIRST_TIME = "user_first_time";
     boolean isUserFirstTime;
 

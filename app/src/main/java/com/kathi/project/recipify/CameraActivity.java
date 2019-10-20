@@ -53,6 +53,7 @@ public class CameraActivity extends AppCompatActivity {
     StorageReference storageReference;
     FirebaseDatabase mFirebaseDatabase;
     DatabaseReference mMessagesDatabaseReference;
+    Intent myIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,11 +93,10 @@ public class CameraActivity extends AppCompatActivity {
 
                 ArrayList<String> test = getIntent().getStringArrayListExtra("allergies");
 
-                Intent myIntent = new Intent(CameraActivity.this, ResultActivity.class);
+                myIntent = new Intent(CameraActivity.this, ResultActivity.class);
                 myIntent.putExtra("image", bitmap);
                 myIntent.putExtra("imgPath", getFileLocation().getAbsoluteFile()+"/screen.jpg");
                 myIntent.putStringArrayListExtra("allergies", test);
-                CameraActivity.this.startActivity(myIntent);
 
 
             }
@@ -220,6 +220,9 @@ public class CameraActivity extends AppCompatActivity {
                                 public void onSuccess(Uri uri) {
                                     Log.d("Dwnldurl", "onSuccess: uri= "+ uri.toString());
                                     mMessagesDatabaseReference.setValue(uri.toString());
+                                    mFirebaseDatabase.getReference().child("check").setValue(1);
+                                    CameraActivity.this.startActivity(myIntent);
+
                                 }
                             });
                             Toast.makeText(CameraActivity.this, "Uploaded", Toast.LENGTH_SHORT).show();

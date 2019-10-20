@@ -17,7 +17,7 @@ import java.util.List;
 public class AllergyActivity extends AppCompatActivity {
 
 
-    CheckBox meatCheck, dairyCheck, nutsCheck, seaCheck, glutenCheck, soyCheck;
+    CheckBox meatCheck, dairyCheck, nutsCheck, seaCheck, glutenCheck, soyCheck, diabeticCheck, lowFatCheck;
     Button submitButton;
     List<String> allergyList;
 
@@ -31,7 +31,9 @@ public class AllergyActivity extends AppCompatActivity {
         seaCheck = findViewById(R.id.seafoodBox);
         glutenCheck = findViewById(R.id.glutenBox);
         soyCheck = findViewById(R.id.soyBox);
+        diabeticCheck = findViewById(R.id.diabeticBox);
         submitButton = findViewById(R.id.submitButton);
+        lowFatCheck = findViewById(R.id.lowFatBox);
 
         allergyList = new ArrayList<>();
 
@@ -54,12 +56,11 @@ public class AllergyActivity extends AppCompatActivity {
                     allergyList.add("milk");
                     allergyList.add("yogurt");
                     allergyList.add("curd");
-                    allergyList.add("water jug");
 
                 }
                 if (nutsCheck.isChecked()) {
                     allergyList.add("peanuts");
-                    allergyList.add("ground nuts");
+                    allergyList.add("groundnuts");
                     allergyList.add("pea nuts");
                     allergyList.add("cashew nuts");
                 }
@@ -74,12 +75,26 @@ public class AllergyActivity extends AppCompatActivity {
                     allergyList.add("wheat");
                     allergyList.add("starch");
                     allergyList.add("corn");
+                    allergyList.add("gluten");
                 }
                 if (soyCheck.isChecked()) {
                     allergyList.add("soy beans");
                     allergyList.add("soy");
                     allergyList.add("soy milk");
                     allergyList.add("soy sauce");
+                    allergyList.add("soybean oil");
+                    allergyList.add("Soybean oil");
+
+                }
+                if (diabeticCheck.isChecked()){
+                    allergyList.add("flour");
+                    allergyList.add("sugar");
+                    allergyList.add("bread");
+                }
+                if(lowFatCheck.isChecked()){
+                    allergyList.add("Vegetable Oil");
+                    allergyList.add("cheese");
+                    allergyList.add("butter");
                 }
 
                 //Displaying the message on the toast
