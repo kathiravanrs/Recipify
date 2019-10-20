@@ -13,29 +13,39 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:elevation="3dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
+            android:paddingLeft="16dp"
             android:paddingTop="16dp"
+            android:id="@+id/take_photo"
+            android:background="#FFA800"
+            android:elevation="3dp"
             android:textColor="@color/white_70"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textSize="30sp"
             android:layout_alignParentTop="true"
-            android:text="What are you allergic to?" />
+            android:text="Take photo of a food item" />
 
         <com.wonderkiln.camerakit.CameraView
             android:id="@+id/cameraView"
             android:layout_width="390dp"
             android:layout_height="520dp"
+            android:layout_below="@+id/take_photo"
+            android:layout_above="@+id/camera_icons"
             android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
             android:layout_gravity="center|top" />
 
         <LinearLayout
-            android:background="#FF9800"
+            android:id="@+id/camera_icons"
+            android:background="#FFA800"
             android:layout_width="match_parent"
+            android:elevation="3dp"
             android:layout_height="100dp"
             android:orientation="horizontal"
             android:layout_marginBottom="16dp"

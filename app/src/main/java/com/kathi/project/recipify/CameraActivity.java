@@ -36,7 +36,6 @@ import com.wonderkiln.camerakit.CameraView;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -58,7 +57,7 @@ public class CameraActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_test);
+        setContentView(R.layout.activity_camera);
         cameraView = findViewById(R.id.cameraView);
 
         FirebaseApp.initializeApp(this);

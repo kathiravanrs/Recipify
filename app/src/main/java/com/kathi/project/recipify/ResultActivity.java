@@ -43,7 +43,7 @@ public class ResultActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.result_view_test);
+        setContentView(R.layout.acitivity_result);
 
         foodTextView = findViewById(R.id.food_textview);
         caloriesView = findViewById(R.id.calories_textview);

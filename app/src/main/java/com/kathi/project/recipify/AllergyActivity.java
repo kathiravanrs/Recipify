@@ -24,7 +24,7 @@ public class AllergyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.allergy_list_activity);
+        setContentView(R.layout.activity_allergy);
         meatCheck = findViewById(R.id.meatBox);
         dairyCheck = findViewById(R.id.dairyBox);
         nutsCheck = findViewById(R.id.nutBox);
