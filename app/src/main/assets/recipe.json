@@ -15,7 +15,7 @@
 	},
 	"popcorn": {
 		"Ingredients": ["corn oil", "soybean oil", "cheese", "whey", "salt", "sodium phosphate", "lactic acid", "sugar"],
-		"name":["Caramel popcorn, Chocolate popcorn", "Popcorn balls"],
+		"name":["Caramel popcorn", "Chocolate popcorn", "Popcorn balls"],
 		"Recipe": ["https://www.allrecipes.com/recipe/24952/caramel-popcorn/?internalSource=rotd&referringId=17798&referringContentType=Recipe%20Hub",
 					"https://www.allrecipes.com/recipe/160595/chocolate-popcorn/?internalSource=streams&referringId=17799&referringContentType=Recipe%20Hub&clickId=st_trending_s",
 					"https://www.allrecipes.com/recipe/15668/favorite-popcorn-balls/?internalSource=streams&referringId=966&referringContentType=Recipe%20Hub&clickId=st_trending_b"]
